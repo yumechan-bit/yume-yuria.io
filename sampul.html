@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RyuuMiikaa - Engineering</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9ecef;
+            /* pink soft */
+            color: #5a4a4f;
+            /* pink soft */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: #fdf7f9;
+            /* putih pink sangat lembut */
+            display: flex;
+            gap: 3rem;
+            border-radius: 16px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 10px 30px rgb(219 138 160 / 0.25);
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .photo {
+            flex: 1;
+            max-width: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgb(219 98 143 / 0.3);
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .content {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        .content h1 {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin: 0;
+            color: #6e4c57;
+            /* coklat pink lembut */
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            color: #846b74;
+            margin: 0;
+            max-width: 460px;
+            line-height: 1.4;
+        }
+
+        .btn-index {
+            width: fit-content;
+            background-color: #d9a4aa;
+            /* pink lembut */
+            color: #4a2e35;
+            /* coklat gelap */
+            border: none;
+            padding: 0.7rem 1.9rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgb(217 164 170 / 0.6);
+            user-select: none;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-index:hover {
+            background-color: #c6898f;
+            color: #3a2328;
+            box-shadow: 0 8px 22px rgb(198 137 143 / 0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 720px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 2rem 1.5rem;
+                max-width: 95%;
+                gap: 2rem;
+            }
+
+            .photo {
+                max-width: 100%;
+                border-radius: 14px;
+            }
+
+            .content {
+                align-items: center;
+                text-align: center;
+            }
+
+            .content h1 {
+                font-size: 1.8rem;
+            }
+
+            .content p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" role="main" aria-label="Profil RyuuMiikaa, Engineering, Web Developer">
+        <div class="photo" aria-label="yurianew.jpeg">
+            <img src="yuria new.jpeg" alt="yurianew.jpeg" />
+        </div>
+        <div class="content">
+            <h1>RyuuMiikaa,<br />Engineering, Web Developer</h1>
+            <p>Saya akan membantu mengambil keputusan yang tepat untuk bisnis Anda</p>
+            <a href="index.html" class="btn-index" aria-label="Masuk ke halaman profil pribadi">MASUK KE PROFIL</a>
+        </div>
+    </div>
+</body>
+
+</html>

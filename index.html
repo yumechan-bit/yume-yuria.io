@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Pribadi</title>
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f9f1f5;
+            color: #4a4a4a;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto 4rem;
+            padding: 0 1rem;
+        }
+
+        /* Bagian Header */
+        header {
+            background: #db628f;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 6px 20px rgba(219, 98, 143, 0.3);
+        }
+
+        header h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* Section Profil Utama */
+        .profile-hero {
+            display: flex;
+            align-items: center;
+            background: white;
+            margin-top: -3rem;
+            /* overlap header */
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgb(219 98 143 / 0.15);
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            flex: 0 0 250px;
+            max-width: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgb(219 98 143 / 0.25);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .profile-intro {
+            flex: 1;
+            position: relative;
+        }
+
+        /* Latarnya agak pink transparan di belakang teks */
+        .profile-intro::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 180px;
+            height: 180px;
+            background: #f4c1d0;
+            opacity: 0.5;
+            border-radius: 120px 0 120px 0;
+            z-index: 0;
+        }
+
+        .profile-intro * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #db628f;
+            font-weight: 700;
+        }
+
+        .profile-intro h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #a73d65;
+        }
+
+        .profile-intro p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 480px;
+            line-height: 1.4;
+            color: #5e3c4c;
+        }
+
+        .btn-contact,
+        .btn-profile {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 12px rgb(219 98 143 / 0.6);
+            user-select: none;
+            text-align: center;
+        }
+
+        .btn-contact {
+            background: #db628f;
+            color: white;
+            border: none;
+            margin-right: 12px;
+        }
+
+        .btn-contact:hover {
+            background: #c4567d;
+            box-shadow: 0 6px 16px rgb(196 86 125 / 0.8);
+        }
+
+        .btn-profile {
+            background: transparent;
+            color: #db628f;
+            border: 2.5px solid #db628f;
+            text-decoration: none;
+        }
+
+        .btn-profile:hover {
+            background: #db628f;
+            color: white;
+            box-shadow: 0 6px 16px rgb(196 86 125 / 0.8);
+        }
+
+        /* Bagian Detail Profil (tabel) */
+        .profile-details {
+            margin-top: 3rem;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgb(219 98 143 / 0.15);
+            color: #61374a;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile-details h3 {
+            font-weight: 700;
+            color: #db628f;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .profile-details ul {
+            list-style: none;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .profile-details ul li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.3rem;
+            position: relative;
+        }
+
+        .profile-details ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #db628f;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            color: #7a7a7a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-hero {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .profile-photo {
+                max-width: 100%;
+                width: 320px;
+                margin: 0 auto;
+            }
+
+            .profile-intro {
+                text-align: center;
+            }
+
+            .profile-intro::before {
+                display: none;
+            }
+
+            .profile-details {
+                padding: 2rem 1.5rem;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Profil Pribadi</h1>
+        <p>Selamat datang di website profil saya, tempat saya berbagi tentang diri, pengalaman, dan keahlian saya.</p>
+    </header>
+
+    <main class="container">
+        <section class="profile-hero">
+            <div class="profile-photo">
+                <img src="yuria new.jpeg" alt="Foto Profil" />
+            </div>
+            <div class="profile-intro">
+                <h2>RyuuMiikaa</h2>
+                <h3>Web Developer, Art, Designer</h3>
+                <p>
+                    Saya seorang web developer berpengalaman dengan passion untuk menciptakan website yang menarik dan
+                    fungsional. Saya berfokus pada desain yang user-friendly dan performa optimal.
+                </p>
+                <div>
+                    <a href="kontak.html" class="btn-contact">Hubungi Saya</a>
+                    <a href="profil.html" class="btn-profile">Lihat Profil</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-details" aria-label="Detail Profil">
+            <h3>Detail Profil</h3>
+            <ul>
+                <li>Nama: RyuuMiikaa</li>
+                <li>Usia: 20 Tahun</li>
+                <li>Lokasi: Banten, Indonesia</li>
+                <li>Keahlian: HTML, CSS, JavaScript, React, UI/UX Design</li>
+                <li>Pendidikan: Sarjana Teknik Informatika</li>
+                <li>Hobi: Membaca, Traveling, Drawing</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 RyuuMiikaa. Semua hak cipta dilindungi.
+    </footer>
+</body>
+
+</html>

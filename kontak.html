@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak Saya - RyuuMiikaa</title>
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f9f1f5;
+            color: #4a4a4a;
+            min-height: 100vh;
+            padding-bottom: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background: #db628f;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 6px 20px rgba(219, 98, 143, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        main {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 6px 20px rgb(219 98 143 / 0.15);
+            margin-top: -3rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: 600;
+            color: #db628f;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 0.85rem 1rem;
+            border: 2px solid #db628f;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #c4567d;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        button[type="submit"] {
+            background: #db628f;
+            color: white;
+            font-weight: 700;
+            padding: 0.85rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgb(219 98 143 / 0.6);
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: #c4567d;
+            box-shadow: 0 6px 22px rgb(196 86 125 / 0.8);
+        }
+
+        /* Tombol kembali ke beranda */
+        .btn-home {
+            display: block;
+            background: #db628f;
+            color: white;
+            text-align: center;
+            max-width: 180px;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 12px rgb(219 98 143 / 0.6);
+            text-decoration: none;
+        }
+
+        .btn-home:hover {
+            background: #c4567d;
+            box-shadow: 0 6px 18px rgb(196 86 125 / 0.8);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            color: #7a7a7a;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kontak Saya</h1>
+        <p>Hubungi saya melalui form di bawah ini</p>
+    </header>
+
+    <main>
+        <form action="#" method="post" novalidate>
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Masukkan email Anda" />
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" required placeholder="Tulis pesan Anda"></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <a href="index.html" class="btn-home">Kembali ke Beranda</a>
+    </main>
+
+    <footer>&copy; 2024 RyuuMiikaa</footer>
+</body>
+
+</html>

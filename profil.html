@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Saya - RyuuMiikaa</title>
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f9f1f5;
+            color: #4a4a4a;
+            min-height: 100vh;
+            line-height: 1.5;
+            padding-bottom: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background: #db628f;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 6px 20px rgba(219, 98, 143, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            font-size: 1.1rem;
+        }
+
+        .profile-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 6px 20px rgb(219 98 143 / 0.15);
+            margin-top: -3rem;
+        }
+
+        .section-title {
+            color: #db628f;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .about-me,
+        .skills,
+        .experience {
+            margin-bottom: 2.5rem;
+        }
+
+        .about-me p {
+            color: #5e3c4c;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .skills ul,
+        .experience ul {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 0;
+        }
+
+        .skills li,
+        .experience li {
+            background: #f8c7d9;
+            margin-bottom: 0.75rem;
+            padding: 0.6rem 1rem;
+            border-radius: 12px;
+            color: #8f4063;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgb(219 98 143 / 0.3);
+        }
+
+        /* Tombol kembali ke beranda */
+        .btn-home {
+            display: block;
+            background: #db628f;
+            color: white;
+            text-align: center;
+            max-width: 180px;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 12px rgb(219 98 143 / 0.6);
+        }
+
+        .btn-home:hover {
+            background: #c4567d;
+            box-shadow: 0 6px 18px rgb(196 86 125 / 0.8);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            color: #7a7a7a;
+        }
+
+        @media (max-width: 768px) {
+            .profile-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Profil Saya</h1>
+        <p>Kesan singkat tentang karir dan pengalaman saya (ngehalu dikit)</p>
+    </header>
+
+    <main class="container profile-content">
+        <section class="about-me">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p>
+                Halo, saya RyuuMiikaa atau akrab di panggil Yuria, seorang web developer dan desainer dengan passion
+                untuk membuat website yang menarik dan fungsional. Saya memiliki pengalaman lebih dari 5 tahun dalam
+                bekerja dengan berbagai teknologi front-end dan back-end, serta selalu memperbarui keterampilan saya
+                sesuai tren teknologi terbaru.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2 class="section-title">Keahlian</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                <li>Framework: React, Vue.js</li>
+                <li>Backend: Node.js, Express</li>
+                <li>coding dasar sistem</li>
+                <li>Pemrograman responsif dan mobile-first design</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            <ul>
+                <li>2023 - sekarang: Senior Web Developer di PT Kreatif Digital</li>
+                <li>2017 - 2020: Frontend Developer di PT Solusi Web</li>
+                <li>2015 - 2017: Junior Web Developer di Startup XYZ</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="btn-home">Kembali ke Beranda</a>
+    </main>
+
+    <footer>&copy; 2024 RyuuMiikaa</footer>
+</body>
+
+</html>
